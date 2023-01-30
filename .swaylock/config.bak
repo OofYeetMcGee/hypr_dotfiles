@@ -1,0 +1,4 @@
+show-failed-attempts
+ignore-empty-password
+image=/usr/share/sddm/themes/chili/assets/background.png
+indicator-caps-lock
