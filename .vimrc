@@ -30,3 +30,9 @@ highlight Comment cterm=italic
 if has("autocmd")
 	au BufReadPost * if line("'\'") > 0 && line("$") | exe "normal! g`\"" | endif
 endif
+
+" set cursor shape in different modes
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+let &t_SR = "\e[3 q"
+
