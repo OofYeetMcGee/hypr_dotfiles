@@ -6,7 +6,7 @@
     // "width": 1280, // Waybar width
     //"spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces", "custom/media", "network", "tray"],
+    "modules-left": ["wlr/workspaces", "network", "custom/spotifyd", "tray"],
     "modules-center": [],//"hyprland/window"],
     "modules-right": ["pulseaudio", "backlight", "battery", "clock"],
     // Modules configuration
@@ -153,17 +153,17 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/media": {
+    "custom/spotifyd": {
         "format": "{icon} {}",
         "return-type": "json",
         "max-length": 40,
         "format-icons": {
-            "spotify": "",
+            "spotifyd": "",
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        // "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        "exec": "/usr/bin/python3 $HOME/.config/waybar/mediaplayer.py --player spotifyd 2> /dev/null" // Filter player based on name
     }
 }
 
