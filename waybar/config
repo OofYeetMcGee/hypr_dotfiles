@@ -6,24 +6,24 @@
     // "width": 1280, // Waybar width
     //"spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces", "network", "custom/spotifyd", "tray"],
+    "modules-left": ["wlr/workspaces", "network", "custom/spotifyd"],
     "modules-center": [],//"hyprland/window"],
-    "modules-right": ["pulseaudio", "backlight", "battery", "clock"],
+    "modules-right": ["tray", "pulseaudio", "backlight", "battery", "clock"],
     // Modules configuration
     "wlr/workspaces": {
 	 "on-click": "activate",
          "disable-scroll": true,
          "all-outputs": true,
-         "format": "{name}", //": {icon}",
+         "format": "<span font='14'>{icon}</span>", //": {name}",
          "format-icons": {
-             //"1": "",
-             //"2": "",
-             //"3": "",
-             //"4": "",
-             //"5": "",
-             //"urgent": "",
-             //"focused": "",
-             //"default": ""
+             // "1": "",
+             // "2": "",
+             // "3": "",
+             // "4": "",
+             // "5": "",
+             "urgent": "",
+             "focused": "",
+             "default": ""  // ""  // "" // ""
          }
     },
     "keyboard-state": {
@@ -105,7 +105,7 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
+        "format": "{percent}% <span font='14'>{icon}</span>" , 
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
@@ -114,7 +114,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
+        "format": "{capacity}% <span font='16'>{icon}</span>",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
@@ -127,7 +127,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "{essid} ({signalStrength}%) <span font='16'></span>",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
@@ -136,7 +136,7 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}", //{format_source}",
+        "format": "{volume}% <span font='16'>{icon}</span>", //{format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",

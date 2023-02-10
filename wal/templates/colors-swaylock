@@ -1,0 +1,16 @@
+show-failed-attempts
+ignore-empty-password
+indicator-caps-lock
+
+screenshots
+
+effect-pixelate=12
+font=Terminus
+
+ring-color={color1.strip}
+ring-ver-color={color4.strip}
+ring-caps-lock-color={color7.strip}
+
+inside-ver-color={color2.strip}
+
+key-hl-color={color3.strip}
