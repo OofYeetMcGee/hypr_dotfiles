@@ -25,7 +25,11 @@ set shiftwidth=4
 set softtabstop=4
 set spelllang=en_us
 
-highlight Comment cterm=italic
+" Set highlight rules
+highlight Comment cterm=italic 
+highlight LineNr ctermfg=cyan
+highlight Statement ctermfg=blue
+highlight CursorLineNr ctermfg=yellow
 
 if has("autocmd")
 	au BufReadPost * if line("'\'") > 0 && line("$") | exe "normal! g`\"" | endif
