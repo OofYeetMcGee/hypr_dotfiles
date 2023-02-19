@@ -11,14 +11,14 @@
     "modules-right": ["tray", "pulseaudio", "backlight", "battery", "clock"],
     // Modules configuration
     "wlr/workspaces": {
-	 "on-click": "activate",
+    "on-click": "activate",
          "disable-scroll": true,
          "all-outputs": true,
          "format": "<span font='14'>{icon}</span>", //": {name}",
          "format-icons": {
-             // "1": "",
-             // "2": "",
-             // "3": "",
+              "1": "",
+              "2": "",
+              "3": "",
              // "4": "",
              // "5": "",
              "urgent": "",
@@ -84,7 +84,7 @@
     },
     "clock": {
         // "timezone": "America/Denver",
-	"format": "{:%I:%M %p}",
+    "format": "{:%I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -105,7 +105,7 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% <span font='14'>{icon}</span>" , 
+        "format": "<span font='14'>{icon}</span> {percent}%" ,
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
@@ -114,9 +114,9 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% <span font='16'>{icon}</span>",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format": "<span font='16'>{icon}</span> {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
@@ -127,7 +127,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) <span font='16'></span>",
+        "format-wifi": "<span font='16'></span> {essid} ({signalStrength}%)",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
@@ -136,10 +136,10 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% <span font='16'>{icon}</span>", //{format_source}",
+        "format": "<span font='16'>{icon}</span> {volume}%", //{format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "<span font='16'></span> {format_source}",
         //"format-source": "{volume}% ",
         //"format-source-muted": "",
         "format-icons": {
