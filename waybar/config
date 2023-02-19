@@ -1,20 +1,21 @@
 {
     "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
     "margin": "5, 5, 5, 5",
-    // "width": 1280, // Waybar width
     //"spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
+    
+	// Choose the order of the modules
     "modules-left": ["wlr/workspaces", "network", "custom/spotifyd"],
     "modules-center": [],//"hyprland/window"],
     "modules-right": ["tray", "pulseaudio", "backlight", "battery", "clock"],
-    // Modules configuration
+    
+
+	// Modules configuration
     "wlr/workspaces": {
     "on-click": "activate",
          "disable-scroll": true,
          "all-outputs": true,
-         "format": "<span font='14'>{icon}</span>", //": {name}",
+         "format": "<span font='16'>{icon}</span>", //": {name}",
          "format-icons": {
               "1": "",
               "2": "",
@@ -34,16 +35,6 @@
             "locked": "",
             "unlocked": ""
         }
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
@@ -105,7 +96,7 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "<span font='14'>{icon}</span> {percent}%" ,
+        "format": "<span font='10'>{icon}</span> {percent}%" ,
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
@@ -114,7 +105,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "<span font='16'>{icon}</span> {capacity}%",
+        "format": "<span font='10'>{icon}</span>  {capacity}%",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
@@ -127,7 +118,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "<span font='16'></span> {essid} ({signalStrength}%)",
+        "format-wifi": "<span font='10'></span>  {essid} ({signalStrength}%)",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
@@ -136,10 +127,10 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "<span font='16'>{icon}</span> {volume}%", //{format_source}",
+        "format": "<span font='10'>{icon}</span>  {volume}%", //{format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "<span font='16'></span> {format_source}",
+        "format-muted": "<span font='10'></span>  {format_source}",
         //"format-source": "{volume}% ",
         //"format-source-muted": "",
         "format-icons": {
@@ -158,7 +149,7 @@
         "return-type": "json",
         "max-length": 40,
         "format-icons": {
-            "spotifyd": "",
+            "spotifyd": "<span font='10'></span>",
             "default": "🎜"
         },
         "escape": true,
