@@ -4,7 +4,7 @@ set nocompatible
 filetype plugin indent on
 syntax enable
 
-set number relativenumber
+set number " relativenumber
 set path+=**
 " set wildmode=longest,list,full
 set encoding=UTF-8
