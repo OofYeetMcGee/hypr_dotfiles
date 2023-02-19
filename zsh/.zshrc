@@ -1,4 +1,3 @@
-
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -108,15 +107,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PAGER=moar
-export MOAR='-colors 16'
 export GOPATH=$HOME/.go
 export EDITOR=nvim
 
 # program aliases
 alias nv="nvim"
 alias ls="ranger"
-alias matrix="unimatrix -a -f -b -l k -c red -s 96"
+alias matrix="unimatrix -a -f -b -l k -c red -s 97"
 # alias spt="spt -c /home/oof/.config/spotify-tui/config.yaml"
 alias dir="dir --color=auto -a"
 alias py="python3"
@@ -139,15 +136,3 @@ alias -s png="nsxiv"
 
 # rate
 xset r rate 300 50
-
-# Toggle fg-bg
-function fg-bg {
-    if [[ $#BUFFER -eq 0 ]]; then
-        BUFFER=fg
-        zle accept-line
-    else
-        zle push-input
-    fi
-}
-zle -N fg-bg
-bindkey '^z' f
