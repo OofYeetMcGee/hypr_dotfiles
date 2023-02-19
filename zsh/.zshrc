@@ -121,6 +121,8 @@ alias matrix="unimatrix -a -f -b -l k -c red -s 96"
 alias dir="dir --color=auto -a"
 alias py="python3"
 alias vim="nvim"
+alias cp="cp -v"
+alias mv="mv -v"
 
 # Script Aliases
 alias cwp="/home/oof/scripts/wp_menu.sh"
