@@ -5,9 +5,9 @@
     //"spacing": 4, // Gaps between modules (4px)
     
 	// Choose the order of the modules
-    "modules-left": ["wlr/workspaces", "network", "custom/spotifyd"],
-    "modules-center": [],//"hyprland/window"],
-    "modules-right": ["tray", "pulseaudio", "backlight", "battery", "clock"],
+    "modules-left": ["network", "custom/spotifyd"],
+    "modules-center": ["wlr/workspaces"],//"hyprland/window"],
+    "modules-right": ["tray", "custom/cava", "pulseaudio", "battery", "clock"],
     
 
 	// Modules configuration
@@ -27,6 +27,7 @@
              "default": ""  // ""  // "" // ""
          }
     },
+
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -36,6 +37,7 @@
             "unlocked": ""
         }
     },
+
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
         "format-disconnected": "Disconnected ",
@@ -63,6 +65,7 @@
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
     "idle_inhibitor": {
+
         "format": "{icon}",
         "format-icons": {
             "activated": "",
@@ -118,7 +121,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "<span font='10'></span>  {essid} ({signalStrength}%)",
+        "format-wifi": "<span font='10'></span>  {signalStrength}%", //{essid}
         "format-ethernet": "{ipaddr}",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
@@ -130,9 +133,9 @@
         "format": "<span font='10'>{icon}</span>  {volume}%", //{format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "<span font='10'></span>  {format_source}",
-        //"format-source": "{volume}% ",
-        //"format-source-muted": "",
+        "format-muted": "<span font='10'></span>", //  {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -147,7 +150,7 @@
     "custom/spotifyd": {
         "format": "{icon} {}",
         "return-type": "json",
-        "max-length": 40,
+        "max-length": 30,
         "format-icons": {
             "spotifyd": "<span font='10'></span>",
             "default": "🎜"
@@ -155,6 +158,11 @@
         "escape": true,
         // "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         "exec": "/usr/bin/python3 $HOME/.config/waybar/mediaplayer.py --player spotifyd 2> /dev/null" // Filter player based on name
-    }
+    },
+	"custom/cava": {
+		"escape": true,
+		"exec-if": "/home/oof/.config/waybar/check_spotifyd.sh",
+		"exec": "/home/oof/.config/waybar/cava.sh"
+	}
 }
 
