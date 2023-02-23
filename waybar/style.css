@@ -115,6 +115,13 @@ button:hover {
     margin: 0 4px;
 	padding: 8px;
 }
+#custom-cava {
+	background: @background;
+	border-radius: 26px 0px 0px 26px;
+	padding-left: 10px;
+	padding-right: 4px;
+
+}
 #window,
 #workspaces {
     background: @background;
@@ -205,7 +212,7 @@ label:focus {
 }
 
 #pulseaudio {
-    border-radius: 26px 0px 0px 26px;
+    border-radius: 0px 0px 0px 0px;
     background-color: @background;
     color: white;
 }
