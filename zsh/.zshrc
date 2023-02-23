@@ -120,6 +120,7 @@ alias py="python3"
 alias vim="nvim"
 alias cp="cp -v"
 alias mv="mv -v"
+alias forecast="curl wttr.in"
 
 # Script Aliases
 alias cwp="/home/oof/scripts/wp_menu.sh"
